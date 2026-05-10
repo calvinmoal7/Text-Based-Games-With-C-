@@ -15,4 +15,88 @@ int main() {
     string leader; // last name of leader
     int adventurers; // number of adventurers that begin the journey
     int killed; // number of adventurers killed
+
+    // Getting info from the player
+    cout << "\tWelcome to Lost Fortune" << endl << endl;
+    cout << "Please enter the following for a personalized adventure.";
+    cout << endl << endl;
+    
+    cout << "Enter Your Last Name: ";
+    cin >> leader;
+
+    cout << "Enter a positive number: ";
+    cin >> adventurers;
+
+    cout << "Enter a positive numbe, less thn the first: ";
+    cin >> killed;
+
+    // Calculate two values needed to tell the story
+    // calculate new values
+    int survivors = adventurers - killed;
+    int extraGoldPieces = GOLD_PIECES % survivors;
+
+    // Telling the story
+    cout << endl;
+    cout << "The Brave " << leader << " lead a group of " << adventurers;
+    cout << " adventurers on a quest." << endl;
+    cout << " They fought a band of ogres and lost " << killed << " ...only ";
+    cout << survivors << " survived." << endl;
+
+    cout << " The party was about to give up when they stumbled upon a" << endl;
+    cout << " buried fortune of " << GOLD_PIECES << " gold pieces. ";
+    cout << " They split the loot and " << endl;
+    cout << leader << " kept the extra " << extraGoldPieces << " gold piece(s)";
+    cout << " to keep things fair." << endl;
+
+
+    // Projects
+
+    // 1. Write a program that displays the following game menu
+
+    //      Game Menu
+    //   1. One Player
+    //   2. Two Players
+    //   3. Quit
+    
+    // The program should get a choice from the player using Enter Choice: as a prompt
+    // Then the program should display a message reporting the player's choice, as in: You Chose X
+    // (where X isthe value the player entered)
+
+    int menuChoice;
+
+    cout << "\t Awesome Game" << endl;
+    
+    cout << "\tGame Menu" << endl;
+    cout << "1. One player\n2. Two players\n3. Quit" << endl; 
+
+    cout << "Enter your choice: ";
+   
+
+    for(int i = 0; ; i++) {
+        cout << " ";
+        cin >> menuChoice;
+        if(menuChoice == 1) {
+            cout << "Starting game... Playing as 1 player";
+            break;
+        }
+        if(menuChoice == 2) {
+            cout << "Starting game... Playing as 2 players";
+            break;
+        }
+        if(menuChoice == 3) {
+            cout << "Quiting the game...";
+            break;
+        }
+        if(menuChoice != 1 && menuChoice != 2 && menuChoice != 3){
+            cout << "wrong choice: re-enter\n";
+        }
+    }
+
+        
+
+
+    return 0;
+
+
+
 }
