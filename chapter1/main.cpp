@@ -64,7 +64,7 @@ int main() {
 
     int menuChoice;
 
-    cout << "\t Awesome Game" << endl;
+    cout << "\tAwesome Game" << endl;
     
     cout << "\tGame Menu" << endl;
     cout << "1. One player\n2. Two players\n3. Quit" << endl; 
@@ -92,8 +92,28 @@ int main() {
         }
     }
 
-        
+    // 2. In a space shooter, a player earns a bonus at the end of each level.
+    //    The player gets 100 points for every civilian saved and 50 points for every alien destroyed
+    //    Write a program that gets the number of civilians saved and number of aliens destroyed. Then have your program
+    //    display the bonus earned. Use two constants: one for the number of points a player earns for saving a civilian and another for the number of points a player earns for destroying an alien
 
+    // define constants
+    const int pointsForCivilianSaved = 70;
+    const int pointsForAlienDestroyed = 100;
+    
+    int noOfCiviliansSaved;
+    int noOfAliensDestroyed;
+
+    cout << "\n\tSpace Shooter Game" << endl;
+    cout << "How many Civilians were saved: ";
+    cin >> noOfCiviliansSaved;
+    cout << " How many Aliens were destroyed: ";
+    cin >> noOfAliensDestroyed;
+
+    cout << "Civilians Saved Bonus: " << pointsForCivilianSaved * noOfCiviliansSaved << endl;
+    cout << "Aliens Destroyed Bonus: " << pointsForAlienDestroyed * noOfAliensDestroyed << endl;
+
+    // 3. Write a program that gets three game scores from a player
 
     return 0;
 
