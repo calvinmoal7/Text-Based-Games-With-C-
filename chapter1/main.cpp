@@ -1,3 +1,5 @@
+// Chapter 1
+
 // Lost Fortune RPG
 // A personalized adventure
 
@@ -20,6 +22,7 @@ int main() {
     cout << "\tWelcome to Lost Fortune" << endl << endl;
     cout << "Please enter the following for a personalized adventure.";
     cout << endl << endl;
+
     
     cout << "Enter Your Last Name: ";
     cin >> leader;
@@ -113,7 +116,35 @@ int main() {
     cout << "Civilians Saved Bonus: " << pointsForCivilianSaved * noOfCiviliansSaved << endl;
     cout << "Aliens Destroyed Bonus: " << pointsForAlienDestroyed * noOfAliensDestroyed << endl;
 
-    // 3. Write a program that gets three game scores from a player
+    // 3. Write a program that gets three game scores from a player and then
+    // displays the average as a floating point number.
+    // (Hint: Review the difference between integer division and floating point division if you get stuck
+
+    float playerScore1;
+    float playerScore2;
+    float playerScore3;
+    float average;
+
+    cout << "Enter in 3 Player Scores" << endl;
+    cout << "1st Score: ";
+    cin >> playerScore1;
+    cout << "2nd Score: ";
+    cin >> playerScore2;
+    cout << "3rd Score: ";
+    cin >> playerScore3;
+
+    average = playerScore1 + playerScore2 + playerScore3;
+    average /= 3;
+
+    cout << "The average score is: " << average;
+
+    // 4. Imagine a card game that begins by dealing from a standard deck
+    // of 52 so that the cards are divided equally among a group of players.
+    // Write a program that gets a number of players and then displays the number
+    // of cards each player is dealt. The program should display the number of cards left 
+    // over after the distribution. Use a constant for the total number of
+    // cards in the deck. (Hint: This program requires an operator that may be new to you)
+
 
     return 0;
 
