@@ -145,6 +145,16 @@ int main() {
     // over after the distribution. Use a constant for the total number of
     // cards in the deck. (Hint: This program requires an operator that may be new to you)
 
+    const int noOfCards = 52;
+    int noOfPlayers;
+
+    cout << "\nWelcome to the card Game \nEnter the number of players, less than 52: ";
+    cin >> noOfPlayers;
+
+    int remainingCards = noOfCards % noOfPlayers;
+
+    cout << "The Card game has " << noOfPlayers << " players and the \nremaining cards are " << remainingCards;
+
 
     return 0;
 
