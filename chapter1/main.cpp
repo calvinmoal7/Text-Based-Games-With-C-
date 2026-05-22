@@ -151,11 +151,10 @@ int main() {
     cout << "\nWelcome to the card Game \nEnter the number of players, less than 52: ";
     cin >> noOfPlayers;
 
+    int noOfCardsEachPlayerHas = noOfCards / noOfPlayers;
     int remainingCards = noOfCards % noOfPlayers;
 
-    cout << "The Card game has " << noOfPlayers << " players and the \nremaining cards are " << remainingCards;
-
-
+    cout << "The Card game has " << noOfPlayers << " players. Each player gets " << noOfCardsEachPlayerHas << " cards and the \nremaining cards are " << remainingCards;
     
     return 0;
 
