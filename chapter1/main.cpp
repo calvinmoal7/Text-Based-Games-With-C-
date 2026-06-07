@@ -137,27 +137,77 @@ int main() {
     average /= 3;
 
     cout << "The average score is: " << average;
-
+    
     // 4. Imagine a card game that begins by dealing from a standard deck
     // of 52 so that the cards are divided equally among a group of players.
     // Write a program that gets a number of players and then displays the number
     // of cards each player is dealt. The program should display the number of cards left 
     // over after the distribution. Use a constant for the total number of
     // cards in the deck. (Hint: This program requires an operator that may be new to you)
-
-    const int noOfCards = 52;
+    
     int noOfPlayers;
-
+    const int noOfCards = 52;
+    
     cout << "\nWelcome to the card Game \nEnter the number of players, less than 52: ";
+    
     cin >> noOfPlayers;
-
     int noOfCardsEachPlayerHas = noOfCards / noOfPlayers;
     int remainingCards = noOfCards % noOfPlayers;
-
+    
     cout << "The Card game has " << noOfPlayers << " players. Each player gets " << noOfCardsEachPlayerHas << " cards and the \nremaining cards are " << remainingCards;
+    
+                                                                 
+    
+    // 5. Write a program that produces a personalized story about a young apprentice
+    // wizard who is ready to take the final test to become a full wizard. The player should be asked for
+    // his or her last name (for the name of the apprentice), a positive number ( for the number of spell the apprentice
+    // has studied), another positive number (for the number of hours the apprentice studied each spell), and a noun (for the object
+    // of the apprentice's favourite incantation). The program should then use the information to fill out a basic story. 
+    // Here's a sample run of the program where the player entered Dawson, followed by 100, followed by 20, followed by Cantaloupe:
+    //                  
+    //                      Welcome to The Test
+    //      Please enter the following for a personalized story
+    //      
+    //      Enter your last name: Dawson
+    //      Enter a positive number: 100
+    //      Enter another positive number: 20
+    //      Enter a noun: Cantaloupe
+    
+    //     Apprentice Wizard Dawson hesitantly approached 
+    // The Temple for the final test. The Apprentice had 
+    // a total of 2000 hours. Dawson only hoped that The 
+    // studied 100 spells for 20 hours each, toiling for 
+    // incantation,The Summoning of the Cantaloupe...
+    // Masters would ask for The Apprentice's favorite 
+
+    string last_name;
+
+    int totalHoursStudied;
+    int hoursStudiedPerSpell;
+    int numberOfSpellsStudied;
+
+    cout << "\t\t\tWelcome to The Test" << endl;
+    cout << endl;
+
+    cout << "Enter your last name: ";
+    cin >> last_name;
+    cout << "Enter the number of spells: ";
+    cin >> numberOfSpellsStudied;
+    cout << "Enter the number of hours studied per spell: ";
+    cin >> hoursStudiedPerSpell;
+
+    cout << "\n\n";
+
+    totalHoursStudied = numberOfSpellsStudied * hoursStudiedPerSpell;
+
+    cout << "Apprentice Wizard " << last_name << " hesitantly approached\n" << "The Temple for the final test. The Apprentice had\n " 
+    << " studied " << numberOfSpellsStudied << " spells for " << hoursStudiedPerSpell << " hours each, toiling for\n " << "a total of " << totalHoursStudied << " hours. " 
+    << last_name <<" only hoped that The incantation\n ,The Summoning of the Cantaloupe would be the test...\n Masters would ask for The Apprentice's favorite spell"; 
+
+
     
     return 0;
 
-
-
 }
+
+
